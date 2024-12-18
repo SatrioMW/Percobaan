@@ -44,6 +44,21 @@
       color: #888;
       font-size: 0.9rem;
     }
+    .extra-links {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .extra-links a {
+      text-decoration: none;
+      font-size: 0.9rem;
+      color: #0056b3;
+    }
+    .extra-links a:hover {
+      color: #004085;
+    }
+    .alert {
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
@@ -54,6 +69,15 @@
     <h4>Portal Resmi Pemerintah</h4>
     <p>Silakan login untuk melanjutkan</p>
   </div>
+
+  <!-- Placeholder untuk pesan error/sukses -->
+  <div class="alert alert-danger" id="error-message" style="display: none;">
+    Username atau password salah.
+  </div>
+  <div class="alert alert-success" id="success-message" style="display: none;">
+    Login berhasil!
+  </div>
+
   <form action="/login" method="POST">
     <div class="mb-3">
       <label for="username" class="form-label">Username</label>
@@ -65,6 +89,13 @@
     </div>
     <button type="submit" class="btn btn-primary w-100">Login</button>
   </form>
+
+  <!-- Tautan tambahan -->
+  <div class="extra-links">
+    <a href="/register">Daftar</a> | 
+    <a href="/forgot-password">Lupa Password?</a>
+  </div>
+
   <div class="footer">
     <p>&copy; 2024 Pemerintah Indonesia</p>
   </div>
